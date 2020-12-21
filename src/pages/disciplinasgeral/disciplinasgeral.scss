@@ -1,0 +1,20 @@
+page-disciplinasgeral {
+  .col {
+    margin: 1px;
+    margin-bottom: 6px;
+    background-color: #e2eff7 ;
+    padding: 10px;
+    }
+
+    .inner {
+      padding: 1.7rem;
+      max-height: 100%;
+
+      .inner-main {
+          border: 1.5pt solid black;
+          text-align: justify;
+          overflow-y: auto scroll;
+      }
+
+}
+}

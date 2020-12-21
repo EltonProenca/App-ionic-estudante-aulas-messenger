@@ -1,0 +1,46 @@
+page-signin {
+
+  .custom-cards{
+
+    ion-card{
+      position: relative;
+      text-align:center;
+
+    }
+    .card-title{
+      position:absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 2px #333;
+    }
+    .card-subtitle{
+      font-size: 2.0em;
+      position: absolute;
+      font-weight: bold;
+      top: 52%;
+      width: 100%;
+      color: #ffff;
+    }
+    ion-content {
+      background-color:blue;
+      background-size: cover;
+      background-position-x: 50%;
+    }
+    .masters {
+      background-color: green;
+    }
+
+  }
+    .login-custom{
+  background-color: #e2eff7;
+  //background-image: url (../ img / fundo . png );
+  background-size: cover;
+  background-position: center;
+  }
+
+
+
+}

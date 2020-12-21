@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>inicio</ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content class="Inicio-custom" fullscreen>
+
+  <div class="custom-cards">
+<ion-card>
+
+    <img  src="assets/imgs/guairaca.jpg">
+      <div class="card-title">AppGuairacá</div>
+       <div class="card-subtitle">Conectado com você</div>
+    <br>
+    <br>
+       <div class="card-subtitle2">a onde estiver</div>
+    <br>
+       <div class="card-subtitle3"><ion-icon name="refresh-circle"></ion-icon></div>
+</ion-card>
+        </div>
+
+          <div>
+            <h3>Atalhos APP</h3>
+          </div>
+
+
+  <button color="tema1" ion-item icon-right detail-none menuClose="user-menu" (click)="onDisciplinas()">
+    <ion-icon name="book" item-end></ion-icon>
+    Disciplinas
+  </button>
+
+</ion-content>

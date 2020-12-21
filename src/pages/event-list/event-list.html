@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista de Eventos do Calendário</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+  <ion-content class="login-custom" fullscreen>
+  <ion-list  no-lines>
+    <ion-item-sliding *ngFor="let item of items">
+      <button  class="card-custom" ion-item *ngIf="item.calendar_id === '1'" (click)="itemSelected(item)">
+        {{ item.title }}
+        <p>Start Date: {{item.dtstart | date: 'dd/MM/yyyy HH:mm:ss'}}
+          <br> End Date: {{item.dtend | date: 'dd/MM/yyyy HH:mm:ss'}}
+          <br> Location: {{item.eventLocation}}
+
+
+      </button>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)='deleteEvent(item)'>
+          <ion-icon name="trash"></ion-icon>
+          delete
+        </button>
+        <button ion-button color="primary" (click)='editEvent(item)'>
+          <ion-icon name="create"></ion-icon>
+          edit
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <!--<ion-item *ngFor="let item of items">
+      <button ion-item *ngIf="item.calendar_id === '1'" (click)="itemSelected(item)">
+        {{ item.title }}
+      </button>
+    </ion-item>-->
+  </ion-list>
+</ion-content>

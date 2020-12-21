@@ -1,0 +1,92 @@
+<!--
+  Generated template for the Disciplina1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{curso}} : {{Materia}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="col" padding>
+        <div *ngIf="currentUpload">
+            <div class="progress">
+              <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+            </div>
+            <Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete >
+          </div>
+
+        <form [formGroup]="fileForm" (ngSubmit)="uploadSingle()">
+          <label color="primary"> <ion-input type="file" (change)="detectFiles($event)"></ion-input></label>
+
+          <div class="form-group">
+            <ion-item>
+              <ion-input type="text" class="form-control"  placeholder="Comentário" formControlName="comentario"> </ion-input>
+            </ion-item>
+
+          </div>
+          <br>
+
+          <button  ion-button icon-end type="submit" class="btn btn-lg btn-success"
+           [disabled]="fileForm.invalid || !selectedFiles">Enviar Arquivo <ion-icon name="home"></ion-icon></button>
+
+        </form>
+
+        <br>
+  <h6 style="color:rgb(0, 0, 0); text-align: center">{{Materia}}</h6>
+  <ion-item >
+    <ion-item-divider style="background:#a7a7a7; text-align:center; font-family: Arial, Helvetica, sans-serif;"
+      color="light">Arquivos enviados</ion-item-divider>
+       <ion-list  no-lines>
+        <ion-item-sliding  *ngFor="let arquivo of arquivosEnviados | async">
+          <ion-item class="col" >
+            Arquivo:  {{arquivo.name}}
+            <p>Comentário: {{arquivo.comentario}}
+            <p>Data de Envio: {{arquivo.createdAt | date: 'dd/MM/yyyy HH:mm:ss'}}
+            </ion-item>
+
+          <ion-item-options side="right">
+                <button ion-button color="dark" outline icon-only  (click)="editProject(arquivo)" >
+                  <ion-icon name='md-create' is-active="false"></ion-icon>
+                </button>
+                <button ion-button color="dark" outline icon-only (click)=" baixarArquivo(arquivo)">
+                  <ion-icon name='download' is-active="false"></ion-icon>
+                </button>
+                <button ion-button color="danger" outline icon-only (click)="confirmacaoDelete(arquivo)">
+                  <ion-icon name='md-trash' is-active="false"></ion-icon>
+                </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-list>
+
+
+    <ion-item-divider style="background:#a7a7a7; text-align:center; font-family: Arial, Helvetica, sans-serif;"
+    color="light">Arquivos Recebidos da Discíplina</ion-item-divider>
+      <ion-list  no-lines>
+          <ion-item-sliding *ngFor="let arquivo of arquivosRecebidos | async">
+            <ion-item class="col">
+              Arquivo:  {{arquivo.name}}
+              <p>Comentário: {{arquivo.comentario}}
+              <p>E-mail Usuario: {{arquivo.user}}
+              <p>Data de Envio:{{arquivo.createdAt | date: 'dd/MM/yyyy HH:mm:ss'}}
+              </ion-item>
+
+              createdAt
+
+            <ion-item-options side="right">
+                <button ion-button color="dark" outline icon-only (click)=" baixarArquivoProf(arquivo)">
+                    <ion-icon name='download' is-active="false"></ion-icon>
+                  </button>
+            </ion-item-options>
+          </ion-item-sliding>
+
+        </ion-list>
+  </ion-item>
+</ion-content>

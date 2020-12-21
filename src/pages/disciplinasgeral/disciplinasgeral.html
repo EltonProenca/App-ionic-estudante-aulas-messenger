@@ -1,0 +1,70 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>{{curso}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content class="col" padding>
+  <div>
+    <div class="inner-main" >
+        <h3 text-center >   Anotações</h3>
+    <ion-card *ngFor="let note of condensedNotes" (click)="noteTapped(note)">
+        <ion-card-content>
+          <ion-icon class="remove-button" name="close-circle" *ngIf="deleteMode" color="red" size="large"></ion-icon>
+          {{note}}
+        </ion-card-content>
+      </ion-card>
+      <ion-buttons end>
+          <button (click)="newNote()" ion-button icon-only>
+            <ion-icon name="add" color="tema2"></ion-icon>
+          </button>
+          <button (click)="deleteMode=!deleteMode" ion-button icon-only>
+            <ion-icon name="trash" color="tema2"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </div>
+<h3>Disciplinas Matriculadas</h3>
+
+<button color="tema1" ion-item icon-right detail-none (click)="onDisciplina0()">
+    {{ materia0}}
+    <ion-icon name="school" item-end></ion-icon>
+  </button>
+<button color="tema1" ion-item icon-right detail-none (click)="onDisciplina1()">
+    {{ materia1}}
+    <ion-icon name="school" item-end></ion-icon>
+  </button>
+<button color="tema1" ion-item icon-right detail-none (click)="onDisciplina2()">
+    {{ materia2}}
+      <ion-icon name="school" item-end></ion-icon>
+</button>
+
+    <!-- Float the icon right -->
+  <button color="tema1" ion-item icon-right detail-none (click)="onDisciplina3()">
+      {{ materia3}}
+        <ion-icon name="school" item-end></ion-icon>
+  </button>
+  <button color="tema1" ion-item icon-right detail-none (click)="onDisciplina4()">
+      {{ materia4}}
+      <ion-icon name="school" item-end></ion-icon>
+  </button>
+
+    <!-- Float the icon right -->
+  <button color="tema1" ion-item icon-right detail-none (click)="onDisciplina5()">
+      {{ materia5}}
+      <ion-icon name="school" item-end></ion-icon>
+  </button>
+  <button color="tema1" ion-item icon-right detail-none (click)="onDisciplina6()">
+      {{ materia6}}
+        <ion-icon name="school" item-end></ion-icon>
+  </button>
+
+      <!-- Float the icon right -->
+  <button color="tema1" ion-item icon-right detail-none (click)="onDisciplina7()">
+        {{ materia7}}
+          <ion-icon name="school" item-end></ion-icon>
+  </button>
+</ion-content>

@@ -1,0 +1,56 @@
+page-home {
+
+  .custom-cards{
+
+    ion-card{
+      position: relative;
+      text-align:center;
+
+    }
+    .card-title{
+      position:absolute;
+      top: 4%;
+      left: -30%;
+      font-size: 1.6em;
+      width: 130%;
+      font-weight: bold;
+      color: rgb(56, 50, 50);
+      text-shadow: 1px 1px 2px #333;
+    }
+    .card-subtitle{
+      font-size: 1.6em;
+      position: absolute;
+      font-weight: bold;
+      top: 11%;
+      left: -30%;
+      width: 130%;
+      color: rgb(56, 50, 50);
+    }
+    .card-subtitle2{
+      font-size: 1.6em;
+      position: absolute;
+      font-weight: bold;
+      top: 16%;
+      left: -30%;
+      width: 130%;
+      color: rgb(56, 50, 50);
+    }
+    .card-subtitle3{
+      font-size: 1.6em;
+      position: absolute;
+      font-weight: bold;
+      top: 22%;
+      left: -30%;
+      width: 130%;
+      color: rgb(56, 50, 50);
+    }
+
+  }
+  .Inicio-custom{
+    background-color: #e2eff7;
+    //background-image: url (../ img / fundo . png );
+    background-size: cover;
+    background-position: center;
+    }
+
+}

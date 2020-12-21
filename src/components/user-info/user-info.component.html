@@ -1,0 +1,21 @@
+
+
+<div *ngIf="user" class = "row">
+    <div>
+      <div class = "col">
+       <!--<label> Aluno: {{ user.name }} </label>-->
+        <ion-avatar [ngClass]="{'custom-background': isMenu}">
+        <img class="round" [src]="user.photo || 'assets/images/no-photo.jpg'">
+        </ion-avatar>
+    </div>
+
+
+    <div class = "col">
+      <h2 text-center>Aluno: {{ user.name }}</h2>
+      <p text-center>RA :{{ user.ra }}</p>
+      <p text-center>{{ user.curso }}</p>
+
+    </div>
+  </div>
+
+</div>

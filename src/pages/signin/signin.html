@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Entrar APPGUAIRACA</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="login-custom" fullscreen>
+
+    <br>
+
+    <img src="assets/imgs/guairaca.png" style="align-items: center">
+    <br>
+    <br>
+
+  <!--<h1 text-center>
+    <ion-icon class="auth-icon" name="chatboxes" color="primary"></ion-icon>
+  </h1>-->
+
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
+
+    <ion-item style="background-color: #e2eff7 ">
+      <ion-icon name="mail" item-start color="primary"></ion-icon>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item style="background-color: #e2eff7 ">
+      <ion-icon name="lock" item-start color="primary"></ion-icon>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <br>
+    <button ion-button full type="submit" [disabled]="signinForm.invalid">Entrar</button>
+
+  </form>
+  <!-- <button ion-button full clear textx-center (click)="onSignup()">Cadastrar-se</button> -->
+
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-content class = "col">
+
+  <user-info [user]="currentUser" [isMenu]="true"></user-info>
+
+  <ion-list class = "col">
+
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onHome()">
+          Home
+      <ion-icon name="home" item-end></ion-icon>
+    </button>
+
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onDisciplinas()">
+         Disciplinas
+      <ion-icon name="book" item-end></ion-icon>
+    </button>
+
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onCalendario()">
+          Calendário
+      <ion-icon name="calendar" item-end></ion-icon>
+    </button>
+
+    <button class="button"  ion-item icon-right detail-none menuClose="user-menu" (click)="onMensagens()">
+          Mensagens
+      <ion-icon name="chatboxes" item-end></ion-icon>
+    </button>
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onListaCalendario()">
+      Lista Eventos Calendário
+    <ion-icon name="list" item-end></ion-icon>
+     </button>
+    <!--
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onFrequencia()">
+          Frequência
+      <ion-icon name="chatboxes" item-end></ion-icon>
+    </button>
+
+    <button class="button" ion-item icon-right detail-none menuClose="user-menu" (click)="onArquivos()">
+          Arquivos
+      <ion-icon class="button"  name="chatboxes" item-end></ion-icon>
+    </button>
+
+    <button class="button"  ion-item icon-right detail-none menuClose="user-menu" (click)="onNotas()">
+          Notas
+      <ion-icon name="chatboxes" item-end></ion-icon>
+    </button>
+    -->
+    <button class="button"  ion-item icon-right detail-none menuClose="user-menu" (click)="onProfile()">
+      Profile
+      <ion-icon name="construct" item-end></ion-icon>
+    </button>
+
+    <button class="button"  ion-item icon-right detail-none menuClose="user-menu" (click)="onLogout()">
+      Logout
+      <ion-icon name="log-out" item-end></ion-icon>
+    </button>
+    <button >
+
+    </button>
+
+  </ion-list>
+
+</ion-content>

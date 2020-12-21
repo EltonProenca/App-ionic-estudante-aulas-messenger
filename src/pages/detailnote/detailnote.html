@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        Note
+    </ion-title>
+
+    <ion-buttons end>
+      <button (click)="saveNote()" ion-button icon-only>
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="col" padding>
+
+<ion-textarea [value]="note" [(ngModel)]="note">{{note}}</ion-textarea>
+
+</ion-content>

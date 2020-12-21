@@ -1,0 +1,73 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>inicio</ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content class="Inicio-custom" fullscreen>
+
+          <div class="custom-cards">
+        <ion-card>
+
+            <img src="assets/imgs/fundo2.jpg">.
+            <div class="card-title">AppGuairacá</div>
+            <div class="card-subtitle">Conectdo com você a onde estiver.</div>
+
+            </ion-card>
+
+        </div>
+
+
+          <DIV>
+
+
+
+            <h3>Atalhos APP</h3>
+          </DIV>
+
+  <!-- Float the icon left -->
+
+<button color="tema1" ion-item icon-right detail-none menuClose="user-menu" (click)="onNotas()">
+    <ion-icon name="home" item-end></ion-icon>
+    Notas
+  </button>
+
+  <!-- Float the icon right -->
+  <button color="tema1" ion-item icon-right detail-none menuClose="user-menu"(click)="onFrequencia()">
+    Frequencia
+    <ion-icon name="construct" item-end></ion-icon>
+  </button>
+  <button color="tema1" ion-item icon-right detail-none menuClose="user-menu" (click)="onDisciplinas()">
+      <ion-icon name="home" item-end></ion-icon>
+      Disciplinas
+    </button>
+
+    <!-- Float the icon right -->
+    <button color="tema1" ion-item icon-right detail-none menuClose="user-menu" (click)="onAtividades()">
+      Atividades
+      <ion-icon name="construct" item-end></ion-icon>
+
+    </button>
+
+    <div class='row'>
+      <div class="col">
+        <button ion-button round outline (click)="showEventsList()">show Events List</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+</ion-content>
